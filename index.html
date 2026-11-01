@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Moon Tower — Lunar Module Stacker</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="480" height="720"></canvas>
+
+  <div id="hud">
+    <div class="hud-block">
+      <div class="label">MODULES</div>
+      <div class="value" id="height">0</div>
+    </div>
+    <div class="hud-block right">
+      <div class="label">SCORE</div>
+      <div class="value" id="score">0</div>
+    </div>
+  </div>
+
+  <div id="stabilityWrap"><div id="stabilityBar"></div></div>
+  <div id="combo" class="hidden">PERFECT ×<span id="comboN">1</span></div>
+  <div id="toast" class="hidden"><span id="toastText"></span></div>
+
+  <div id="overlay" class="show">
+    <div class="panel">
+      <h1>MOON TOWER</h1>
+      <p class="sub">Lunar Module Stacker</p>
+      <div class="rules">
+        <p>Land each <b>lunar module</b> on the stack.</p>
+        <p>Hit <b>dead center</b> for a <b>PERFECT</b> bonus and a golf swing from your astronaut.</p>
+        <p>Land too far off and <b>moon gravity</b> takes over — the module tips and the whole tower comes down.</p>
+        <p>Build it higher. Keep it balanced.</p>
+      </div>
+      <button id="startBtn">LAUNCH</button>
+      <p class="hint">Tap / Click / Space to drop</p>
+    </div>
+  </div>
+
+  <div id="gameover" class="hidden">
+    <div class="panel">
+      <h1>TOWER DOWN</h1>
+      <p class="sub">Final height <b id="finalHeight">0</b> modules</p>
+      <p class="sub small" id="finalNote">&nbsp;</p>
+      <div class="row">
+        <button id="retryBtn">REBUILD</button>
+        <button id="muteBtn" class="ghost">SOUND: ON</button>
+      </div>
+      <p class="hint">or press Space</p>
+    </div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
